@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" th:action="@{/update/{bookId}(bookId=${book.bookId})}" th:object="${book}" method="post">
+    <label for="bookName">BookName</label>
+    <input type="text" th:field="*{bookName}" ><br>
+    
+    <label for="bookAuthor">BookAuthor</label>
+    <input type="text" th:field="*{bookAuthor}"><br>
+    
+    <label for="bookPrice">BookPrice</label>
+    <input type="text" th:field="*{bookPrice}"><br>
+    
+    <input type="submit" value="Update User">   
+</form>
+</body>
+</html>

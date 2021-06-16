@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Register</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+	<div align="center">
+		<h1>Register Succeeded!</h1>
+		<span>Book Id:</span><span th:text="${book.bookId}"></span>
+		<span>Book Name:</span><span th:text="${book.bookName}"></span>
+		<span>Book Author:</span><span th:text="${book.bookAuthor}"></span>
+		<span>Book Price:</span><span th:text="${book.bookPrice}"></span>
+	</div>
+	<a class="btn btn-sm" href="/getbook" role="button">ViewBook</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html xmlns:th="html://www.thymleaf.org/">
+<head>
+</head>
+<body>
+
+	<h3>Book Details</h3>
+	<!--/* this is comment line */-->
+	<table>
+		<tr>
+			<th>Book ID</th>
+			<th>Book Name</th>
+			<th>Book Author</th>
+			<th>Book Price</th>
+			<th>Action</th>
+			
+		</tr>
+		<tr th:each="ob:${book}">
+			<td th:text="${ob.bookId}"></td>
+			<td th:text="${ob.bookName}"></td>
+			<td th:text="${ob.bookAuthor}"></td>
+			<td th:text="${ob.bookPrice}"></td>
+			<td><a th:href="@{/edit/{bookId}(bookId=${ob.bookId})}" role="button">Edit</a></td>
+			<td><a th:href="@{/delete(bookId=${ob.bookId})}" role="button">Delete</a></td>
+			
+		</tr>
+	</table>
+</body>
+</html>
